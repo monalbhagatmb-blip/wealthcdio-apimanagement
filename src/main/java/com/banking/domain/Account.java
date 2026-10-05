@@ -13,7 +13,7 @@ public class Account {
     private final List<Transaction> ledger;
 
     public Account(String id, BigDecimal initialBalance) {
-        if (id == null || id.blank()) {
+        if (id == null || id.isBlank()) {
             throw new IllegalArgumentException("Account ID cannot be null or empty.");
         }
         validateAmountPositive(initialBalance);
